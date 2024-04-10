@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 5rem;
+  line-height: 6.4rem;
+  color: #222;
+}
+
+h2 {
+  font-size: 4.6rem;
+  line-height: 5.4rem;
+  color: #222;
+}
+
+h4 {
+  font-size: 2rem;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  color: #465b52;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.section-p1 {
+  padding: 4rem 8rem;
+}
+
+.section-m1 {
+  margin: 4rem 0;
+}
+
+body {
+  width: 100%;
+  font-size: 1.6rem;
+}
