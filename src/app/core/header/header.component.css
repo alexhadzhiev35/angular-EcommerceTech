@@ -11,6 +11,19 @@
   left: 0;
 }
 
+.logoLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #1a1a1a;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.logoLink:hover {
+  color: #be7f09;
+}
+
 .logo {
   width: 5rem;
 }
