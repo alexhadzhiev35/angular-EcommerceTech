@@ -34,4 +34,9 @@ export class ApiService {
     const { apiUrl } = environment;
     return this.http.patch<User>(`${apiUrl}/users/${userId}.json`, user);
   }
+
+  deleteUser(userId: string) {
+    const { apiUrl } = environment;
+    return this.http.delete(`${apiUrl}/users/${userId}.json`);
+  }
 }

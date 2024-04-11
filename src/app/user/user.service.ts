@@ -44,8 +44,22 @@ export class UserService {
           userId = id;
         }
       }
-      console.log(userId);
       this.api.updateUser(user, userId).subscribe(console.log);
+
+      this.user = undefined;
+      localStorage.removeItem(this.USER_KEY);
+    });
+  }
+
+  delete(user: User) {
+    let userId: string = '';
+    this.api.getUsers().subscribe((users) => {
+      for (let [id, user] of Object.entries(users)) {
+        if (this.user?.email === user.email) {
+          userId = id;
+        }
+      }
+      this.api.deleteUser(userId).subscribe(console.log);
 
       this.user = undefined;
       localStorage.removeItem(this.USER_KEY);

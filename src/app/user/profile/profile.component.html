@@ -101,6 +101,13 @@
       #rePass="ngModel"
       minlength="6"
     />
-    <button class="normal" type="submit" [disabled]="!form.valid">Save</button>
+    <div class="btn-box">
+      <button class="normal save-btn" type="submit" [disabled]="!form.valid">
+        Save
+      </button>
+      <button class="normal delete-btn" (click)="delete()">
+        Delete profile
+      </button>
+    </div>
   </form>
 </section>

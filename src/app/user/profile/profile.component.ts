@@ -33,6 +33,17 @@ export class ProfileComponent implements OnInit {
     this.router.navigate(['/auth/login']);
   }
 
+  delete() {
+    const confirm = window.confirm(
+      'Are you sure you want to delete your account?'
+    );
+
+    if (confirm) {
+      this.userService.delete(this.user);
+      this.router.navigate(['/auth/login']);
+    }
+  }
+
   ngOnInit(): void {
     if (this.userService.profileDetails) {
       this.user = this.userService.profileDetails;

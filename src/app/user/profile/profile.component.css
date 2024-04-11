@@ -40,3 +40,15 @@
 input.ng-invalid.ng-touched {
   background-color: #e9131338;
 }
+
+.btn-box {
+  display: flex;
+}
+
+.save-btn {
+  margin-right: 3rem;
+}
+
+.delete-btn {
+  background-color: #9b2508 !important;
+}
