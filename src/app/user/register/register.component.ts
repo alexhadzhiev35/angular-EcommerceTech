@@ -34,5 +34,6 @@ export class RegisterComponent {
     };
 
     this.userService.register(this.user);
+    this.router.navigate(['/home']);
   }
 }

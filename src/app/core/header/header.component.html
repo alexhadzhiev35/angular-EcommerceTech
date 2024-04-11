@@ -19,12 +19,13 @@
     </ul>
   </div>
 
-  <div class="navbar">
+  <div *ngIf="!isLoggedIn" class="navbar">
     <li><a routerLink="/auth/login">Login</a></li>
     <li><a routerLink="/auth/register">Register</a></li>
   </div>
-  <!-- <div class="navbar">
+
+  <div *ngIf="isLoggedIn" class="navbar">
     <li><a routerLink="/auth/profile">Profile</a></li>
-    <li><a routerLink="/auth/logout">Logout</a></li>
-  </div> -->
+    <li (click)="logout()"><a routerLink="/auth/logout">Logout</a></li>
+  </div>
 </section>
