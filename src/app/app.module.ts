@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { HomeModule } from './home/home.module';
+import { PagesModule } from './pages/pages.module';
 import { ProductModule } from './product/product.module';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { ProductModule } from './product/product.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    HomeModule,
+    PagesModule,
     ProductModule,
   ],
   providers: [],
