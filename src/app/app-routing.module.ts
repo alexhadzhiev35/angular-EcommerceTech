@@ -9,10 +9,10 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  // {
-  //   path: 'auth',
-  //   loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
-  // },
+  {
+    path: 'auth',
+    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  },
   // { path: 'error', component: ErrorComponent },
   // { path: '**', redirectTo: '/404' },
   // { path: '404', component: NotFoundComponent },
