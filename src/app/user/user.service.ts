@@ -25,12 +25,18 @@ export class UserService {
   //FIX<E
   login(email: string, password: string) {
     this.api.getUsers().subscribe((users) => {
-      users.filter(
-        (user) => user.password === password && user.email === email
-      );
+      this.user = Object.values(users).filter(
+        (usr: User) => usr.password == password && usr.email == email
+      )[0];
     });
 
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
+  }
+
+  register(user: User) {
+    this.api.addUser(user).subscribe(console.log);
+
+    localStorage.setItem(this.USER_KEY, JSON.stringify(user));
   }
 
   logout() {

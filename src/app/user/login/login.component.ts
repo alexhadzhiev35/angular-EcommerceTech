@@ -16,9 +16,12 @@ export class LoginComponent {
       return;
     }
 
-    console.log(form);
+    // console.log(form);
 
-    // this.userService.login(form.);
+    const email = form.value.email;
+    const password = form.value.password;
+
+    this.userService.login(email, password);
     // this.router.navigate(['/home']);
   }
 }

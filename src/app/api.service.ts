@@ -19,4 +19,9 @@ export class ApiService {
     const { apiUrl } = environment;
     return this.http.get<User[]>(`${apiUrl}/users.json`);
   }
+
+  addUser(user: User) {
+    const { apiUrl } = environment;
+    return this.http.post<User>(`${apiUrl}/users.json`, user);
+  }
 }
