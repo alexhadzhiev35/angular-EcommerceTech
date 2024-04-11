@@ -2,7 +2,23 @@
   <h2>Featured Products</h2>
   <p>Best Performace, Best Price</p>
   <div class="pro-container">
-    <div class="pro">
+    <div *ngFor="let product of featuredProducts" class="pro">
+      <img src="{{ product.imageUrl1 }}" alt="" />
+      <div class="des">
+        <span>{{ product.brand }}</span>
+        <h5>{{ product.model }}</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>${{ product.price }}</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <!-- <div class="pro">
       <img src="../../../assets/products/play.jpg" alt="" />
       <div class="des">
         <span>Apple</span>
@@ -65,22 +81,6 @@
         <h4>$5999</h4>
       </div>
       <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-    </div>
-    <div class="pro">
-      <img src="../../../assets/products/play.jpg" alt="" />
-      <div class="des">
-        <span>Apple</span>
-        <h5>MacBook Pro 16"</h5>
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h4>$5999</h4>
-      </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-    </div>
+    </div> -->
   </div>
 </section>

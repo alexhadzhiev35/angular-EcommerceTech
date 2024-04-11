@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { PagesModule } from './pages/pages.module';
 import { ProductModule } from './product/product.module';
 import { UserModule } from './user/user.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { UserModule } from './user/user.module';
     PagesModule,
     ProductModule,
     UserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -4,27 +4,11 @@
 </section>
 <section id="product">
   <div class="pro-container">
-    <div class="pro">
-      <img src="../../../assets/products/play.jpg" alt="" />
+    <div *ngFor="let product of products" class="pro">
+      <img src="{{ product.imageUrl1 }}" alt="" />
       <div class="des">
-        <span>Apple</span>
-        <h5>MacBook Pro 16"</h5>
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>0
-          <i class="fas fa-star"></i>
-        </div>
-        <h4>$5999</h4>
-      </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-    </div>
-    <div class="pro">
-      <img src="../../../assets/products/play.jpg" alt="" />
-      <div class="des">
-        <span>Apple</span>
-        <h5>MacBook Pro 16"</h5>
+        <span>{{ product.brand }}</span>
+        <h5>{{ product.model }}</h5>
         <div class="star">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -32,75 +16,11 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
-        <h4>$5999</h4>
+        <h4>${{ product.price }}</h4>
       </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+      <a [routerLink]="product.id"><i class="fal fa-shopping-cart cart"></i></a>
     </div>
-    <div class="pro">
-      <img src="../../../assets/products/play.jpg" alt="" />
-      <div class="des">
-        <span>Apple</span>
-        <h5>MacBook Pro 16"</h5>
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h4>$5999</h4>
-      </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-    </div>
-    <div class="pro">
-      <img src="../../../assets/products/play.jpg" alt="" />
-      <div class="des">
-        <span>Apple</span>
-        <h5>MacBook Pro 16"</h5>
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h4>$5999</h4>
-      </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-    </div>
-    <div class="pro">
-      <img src="../../../assets/products/play.jpg" alt="" />
-      <div class="des">
-        <span>Apple</span>
-        <h5>MacBook Pro 16"</h5>
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <h4>$5999</h4>
-      </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-    </div>
-    <div class="pro">
-      <img src="../../../assets/products/play.jpg" alt="" />
-      <div class="des">
-        <span>Apple</span>
-        <h5>MacBook Pro 16"</h5>
-        <div class="star">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>0
-          <i class="fas fa-star"></i>
-        </div>
-        <h4>$5999</h4>
-      </div>
-      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-    </div>
-    <div class="pro">
+    <!-- <div class="pro">
       <img src="../../../assets/products/play.jpg" alt="" />
       <div class="des">
         <span>Apple</span>
@@ -253,6 +173,22 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>0
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$5999</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <div class="pro">
+      <img src="../../../assets/products/play.jpg" alt="" />
+      <div class="des">
+        <span>Apple</span>
+        <h5>MacBook Pro 16"</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
         </div>
@@ -260,6 +196,70 @@
       </div>
       <a href=""><i class="fal fa-shopping-cart cart"></i></a>
     </div>
+    <div class="pro">
+      <img src="../../../assets/products/play.jpg" alt="" />
+      <div class="des">
+        <span>Apple</span>
+        <h5>MacBook Pro 16"</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$5999</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <div class="pro">
+      <img src="../../../assets/products/play.jpg" alt="" />
+      <div class="des">
+        <span>Apple</span>
+        <h5>MacBook Pro 16"</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$5999</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <div class="pro">
+      <img src="../../../assets/products/play.jpg" alt="" />
+      <div class="des">
+        <span>Apple</span>
+        <h5>MacBook Pro 16"</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$5999</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div>
+    <div class="pro">
+      <img src="../../../assets/products/play.jpg" alt="" />
+      <div class="des">
+        <span>Apple</span>
+        <h5>MacBook Pro 16"</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>$5999</h4>
+      </div>
+      <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+    </div> -->
   </div>
 </section>
 <section id="pagination" class="section-p1 section-m1">
