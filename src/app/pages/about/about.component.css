@@ -1,0 +1,30 @@
+#page-header {
+  background-image: url("../../../assets/b22.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 1.4rem;
+}
+
+#page-header h2,
+#page-header p {
+  color: #191d4e;
+}
+
+#about-head {
+  display: flex;
+  align-items: center;
+}
+
+#about-head img {
+  width: 50%;
+  height: auto;
+}
+
+#about-head div {
+  padding-left: 4rem;
+}
