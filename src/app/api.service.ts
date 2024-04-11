@@ -15,6 +15,11 @@ export class ApiService {
     return this.http.get<Product[]>(`${apiUrl}/products.json`);
   }
 
+  // getUser() {
+  //   const { apiUrl } = environment;
+  //   return this.h;
+  // }
+
   getUsers() {
     const { apiUrl } = environment;
     return this.http.get<User[]>(`${apiUrl}/users.json`);
@@ -23,5 +28,10 @@ export class ApiService {
   addUser(user: User) {
     const { apiUrl } = environment;
     return this.http.post<User>(`${apiUrl}/users.json`, user);
+  }
+
+  updateUser(user: User, userId: string) {
+    const { apiUrl } = environment;
+    return this.http.patch<User>(`${apiUrl}/users/${userId}.json`, user);
   }
 }

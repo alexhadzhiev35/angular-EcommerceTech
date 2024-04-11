@@ -1,1 +1,106 @@
-<p>profile works!</p>
+<section id="form-details">
+  <form action="" #form="ngForm" (ngSubmit)="edit(form)">
+    <h2>Edit your account</h2>
+
+    <span class="helperSpan" *ngIf="!username.valid && username.touched"
+      >Username cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="username"
+      required
+      ngModel="{{ user.username }}"
+      placeholder="Username"
+      #username="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!firstName.valid && firstName.touched"
+      >First name cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="firstName"
+      required
+      ngModel="{{ user.firstName }}"
+      placeholder="First Name"
+      #firstName="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!lastName.valid && lastName.touched"
+      >Last name cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="lastName"
+      required
+      ngModel="{{ user.lastName }}"
+      placeholder="Last Name"
+      #lastName="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!date.valid && date.touched"
+      >Date cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="dateOfBirth"
+      required
+      ngModel="{{ user.dateOfBirth }}"
+      placeholder="Date of birth"
+      #date="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!email.valid && email.touched"
+      >Please enter valid email
+    </span>
+    <input
+      type="text"
+      name="email"
+      required
+      ngModel="{{ user.email }}"
+      placeholder="Email"
+      email
+      #email="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!phoneNumber.valid && phoneNumber.touched"
+      >Please enter valid number
+    </span>
+    <input
+      type="text"
+      name="phoneNumber"
+      required
+      ngModel="{{ user.phoneNumber }}"
+      placeholder="Phone number"
+      #phoneNumber="ngModel"
+      minlength="6"
+    />
+
+    <span class="helperSpan" *ngIf="!password.valid && password.touched"
+      >Password shold be atleast 6 characters!
+    </span>
+    <input
+      type="password"
+      name="password"
+      required
+      ngModel
+      placeholder="Password"
+      #password="ngModel"
+      minlength="6"
+    />
+
+    <span class="helperSpan" *ngIf="!rePass.valid && rePass.touched"
+      >Password shold be atleast 6 characters!
+    </span>
+    <input
+      type="password"
+      name="rePassword"
+      required
+      ngModel
+      placeholder="Repeat password"
+      #rePass="ngModel"
+      minlength="6"
+    />
+    <button class="normal" type="submit" [disabled]="!form.valid">Save</button>
+  </form>
+</section>

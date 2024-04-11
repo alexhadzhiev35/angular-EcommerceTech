@@ -1,0 +1,42 @@
+#form-details form {
+  margin: 2rem auto 0 auto;
+
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  outline: none;
+  margin-bottom: 2rem;
+  border: 1px solid #e1e1e1;
+}
+
+#form-details form button {
+  background-color: #be7f09;
+  color: #fff;
+}
+
+#form-details form button:disabled {
+  background-color: #575145;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+#form-details form span {
+  font-size: 1.2rem;
+}
+
+#form-details form h2 {
+  font-size: 3.6rem;
+  line-height: 3.5rem;
+  padding: 2rem 0;
+}
+
+input.ng-invalid.ng-touched {
+  background-color: #e9131338;
+}

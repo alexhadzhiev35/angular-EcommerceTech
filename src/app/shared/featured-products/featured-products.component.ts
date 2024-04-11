@@ -32,13 +32,10 @@ export class FeaturedProductsComponent implements OnInit {
           options: value.options,
         };
 
-        console.log(product.isFeatured);
         if (product.isFeatured) {
           this.featuredProducts?.push(product);
         }
       }
     });
-
-    console.log(this.featuredProducts);
   }
 }
