@@ -1,14 +1,94 @@
 <section id="form-details">
-  <form action="">
+  <form action="" #form="ngForm" (ngSubmit)="register(form)">
     <span>Auth</span>
     <h2>Register new account</h2>
-    <input type="text" placeholder="Username" />
-    <input type="text" placeholder="First Name" />
-    <input type="text" placeholder="Last Name" />
-    <input type="text" placeholder="Date of birth" />
-    <input type="text" placeholder="Email" />
-    <input type="text" placeholder="Password" />
-    <input type="text" placeholder="Repeat password" />
-    <button class="normal">Register</button>
+
+    <span class="helperSpan" *ngIf="!username.valid && username.touched"
+      >Username cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="username"
+      required
+      ngModel
+      placeholder="Username"
+      #username="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!firstName.valid && firstName.touched"
+      >First name cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="firstName"
+      required
+      ngModel
+      placeholder="First Name"
+      #firstName="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!lastName.valid && lastName.touched"
+      >Last name cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="lastName"
+      required
+      ngModel
+      placeholder="Last Name"
+      #lastName="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!date.valid && date.touched"
+      >Date cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="dateOfBirth"
+      required
+      ngModel
+      placeholder="Date of birth"
+      #date="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!email.valid && email.touched"
+      >Please enter valid email
+    </span>
+    <input
+      type="text"
+      name="email"
+      required
+      ngModel
+      placeholder="Email"
+      email
+      #email="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!password.valid && password.touched"
+      >Password shold be atleast 6 characters!
+    </span>
+    <input
+      type="password"
+      name="password"
+      required
+      ngModel
+      placeholder="Password"
+      #password="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!rePass.valid && rePass.touched"
+      >Password shold be atleast 6 characters!
+    </span>
+    <input
+      type="password"
+      name="rePassword"
+      required
+      ngModel
+      placeholder="Repeat password"
+      #rePass="ngModel"
+    />
+    <button class="normal" type="submit" [disabled]="!form.valid">
+      Register
+    </button>
   </form>
 </section>

@@ -1,9 +1,32 @@
 <section id="form-details">
-  <form action="">
+  <form action="" #form="ngForm" (ngSubmit)="login(form)">
     <span>Auth</span>
     <h2>Log into your account</h2>
-    <input type="text" placeholder="Email" />
-    <input type="text" placeholder="Password" />
-    <button class="normal">Login</button>
+    <span class="helperSpan" *ngIf="!email.valid && email.touched"
+      >Please enter valid email
+    </span>
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+      ngModel
+      email
+      #email="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!password.valid && password.touched"
+      >Password shold be atleast 6 characters!
+    </span>
+    <input
+      type="password"
+      name="text"
+      placeholder="Password"
+      required
+      ngModel
+      minlength="6"
+      #password="ngModel"
+    />
+    <button class="normal" type="submit" [disabled]="!form.valid">Login</button>
   </form>
 </section>

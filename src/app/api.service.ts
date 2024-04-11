@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from './enviroments/enviroment';
 import { Product } from './types/product';
+import { User } from './types/user';
 
 @Injectable({
   providedIn: 'root',
@@ -14,8 +15,8 @@ export class ApiService {
     return this.http.get<Product[]>(`${apiUrl}/products.json`);
   }
 
-  getProduct(id: string) {
+  getUsers() {
     const { apiUrl } = environment;
-    return this.http.get<Product>(`${apiUrl}/themes/${id}`);
+    return this.http.get<User[]>(`${apiUrl}/users.json`);
   }
 }
