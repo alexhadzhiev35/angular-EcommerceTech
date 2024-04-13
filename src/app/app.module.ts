@@ -8,6 +8,7 @@ import { PagesModule } from './pages/pages.module';
 import { ProductModule } from './product/product.module';
 import { UserModule } from './user/user.module';
 import { HttpClientModule } from '@angular/common/http';
+import { appInterceptorProvider } from './app.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     UserModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

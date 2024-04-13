@@ -29,10 +29,17 @@ export class UserService {
   //FIX<E
   login(email: string, password: string) {
     this.api.getUsers().subscribe((users) => {
-      this.user = Object.values(users).filter(
+      let user = {} as User;
+      user = Object.values(users).filter(
         (usr: User) => usr.password === password && usr.email === email
       )[0];
-      localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
+
+      if (!user) {
+        alert('Wrong credentials');
+      } else {
+        this.user = user;
+        localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
+      }
     });
   }
 

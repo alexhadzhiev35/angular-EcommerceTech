@@ -12,7 +12,7 @@ export class ApiService {
 
   getProducts() {
     const { apiUrl } = environment;
-    return this.http.get<Product[]>(`${apiUrl}/products.json`);
+    return this.http.get<Product[]>(`/api/products.json`);
   }
 
   // getUser() {
