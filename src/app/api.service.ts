@@ -15,6 +15,14 @@ export class ApiService {
     return this.http.get<Product[]>(`/api/products.json`);
   }
 
+  addProduct(product: Product) {
+    const productWithoutId = JSON.parse(JSON.stringify(product));
+
+    delete productWithoutId.id;
+
+    return this.http.post<Product>(`/api/products.json`, productWithoutId);
+  }
+
   // getUser() {
   //   const { apiUrl } = environment;
   //   return this.h;

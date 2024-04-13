@@ -1,0 +1,130 @@
+<section id="form-details">
+  <form action="" #form="ngForm" (ngSubmit)="add(form)">
+    <span>Products</span>
+    <h2>Add new product</h2>
+
+    <span class="helperSpan" *ngIf="!imageUrl1.valid && imageUrl1.touched"
+      >Image URL cannot be empty!
+    </span>
+    <input
+      name="imageUrl1"
+      required
+      ngModel
+      placeholder="Image URL 1"
+      #imageUrl1="ngModel"
+    />
+
+    <input
+      name="imageUrl2"
+      ngModel
+      placeholder="Image URL 2"
+      #imageUrl2="ngModel"
+    />
+
+    <input
+      name="imageUrl3"
+      ngModel
+      placeholder="Image URL 3"
+      #imageUrl2="ngModel"
+    />
+
+    <input
+      name="imageUrl4"
+      ngModel
+      placeholder="Image URL 4"
+      #imageUrl2="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!category.valid && category.touched"
+      >Category cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="category"
+      required
+      ngModel
+      placeholder="Category"
+      #category="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!brand.valid && brand.touched"
+      >Brand cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="brand"
+      required
+      ngModel
+      placeholder="Brand"
+      #brand="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!model.valid && model.touched"
+      >Model cannot be empty!
+    </span>
+    <input
+      type="text"
+      name="model"
+      required
+      ngModel
+      placeholder="Model"
+      #model="ngModel"
+    />
+
+    <span
+      class="helperSpan"
+      *ngIf="!specifications.valid && specifications.touched"
+      >Please enter valid specifications
+    </span>
+    <input
+      type="text"
+      name="specifications"
+      required
+      ngModel
+      placeholder="Specifications as string[]"
+      #specifications="ngModel"
+    />
+
+    <span class="helperSpan" *ngIf="!price.valid && price.touched"
+      >Please enter valid price
+    </span>
+    <input
+      type="number"
+      name="price"
+      required
+      ngModel
+      placeholder="Price in USD"
+      #price="ngModel"
+      minlength="6"
+    />
+
+    <span class="helperSpan" *ngIf="!description.valid && description.touched"
+      >Description shold be atleast 10 characters!
+    </span>
+    <textarea
+      rows="5"
+      type="description"
+      name="description"
+      required
+      ngModel
+      placeholder="Description of the product"
+      #description="ngModel"
+      minlength="10"
+    ></textarea>
+
+    <span class="helperSpan" *ngIf="!options.valid && options.touched"
+      >Please enter valid options!
+    </span>
+    <input
+      type="text"
+      name="options"
+      required
+      ngModel
+      placeholder="Options as string []"
+      #options="ngModel"
+    />
+    <button class="normal" type="submit" [disabled]="!form.valid">
+      Register
+    </button>
+  </form>
+</section>

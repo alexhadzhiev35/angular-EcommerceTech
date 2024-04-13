@@ -25,6 +25,7 @@
   </div>
 
   <div *ngIf="isLoggedIn" class="navbar">
+    <li><a routerLink="/products/add">Add product</a></li>
     <li><a routerLink="/auth/profile">Profile</a></li>
     <li (click)="logout()"><a href="#">Logout</a></li>
   </div>
