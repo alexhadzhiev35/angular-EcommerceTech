@@ -10,7 +10,15 @@ export class UserService {
   USER_KEY = '[user]';
 
   get isLogged(): boolean {
+    // localStorage.getItem("[user]");
     return !!this.user;
+  }
+
+  isAuthenticated() {
+    const promise = new Promise((resolve, reject) => {
+      resolve(this.isLogged);
+    });
+    return promise;
   }
 
   get profileDetails(): User | undefined {

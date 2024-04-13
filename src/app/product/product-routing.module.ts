@@ -4,13 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { AuthActivate } from '../guards/auth.activate';
 
 const routes: Routes = [
   {
     path: 'products',
     children: [
       { path: '', pathMatch: 'full', component: ProductListComponent },
-      { path: 'add', component: AddProductComponent },
+      {
+        path: 'add',
+        canActivate: [AuthActivate],
+        component: AddProductComponent,
+      },
       { path: ':productId', component: ProductDetailsComponent },
     ],
   },
