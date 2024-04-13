@@ -3,7 +3,11 @@
   <p>Best Performace, Best Price</p>
   <div class="pro-container">
     <div *ngFor="let product of featuredProducts" class="pro">
-      <img src="{{ product.imageUrl1 }}" alt="" />
+      <img
+        (click)="goToDetails(product.id)"
+        src="{{ product.imageUrl1 }}"
+        alt=""
+      />
       <div class="des">
         <span>{{ product.brand }}</span>
         <h5>{{ product.model }}</h5>

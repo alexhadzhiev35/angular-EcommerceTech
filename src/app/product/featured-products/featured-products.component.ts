@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Product } from 'src/app/types/product';
 
@@ -10,7 +11,11 @@ import { Product } from 'src/app/types/product';
 export class FeaturedProductsComponent implements OnInit {
   featuredProducts: Product[] | null = [];
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, private router: Router) {}
+
+  goToDetails(productId: string) {
+    this.router.navigate([`products/${productId}`]);
+  }
 
   ngOnInit(): void {
     this.api.getProducts().subscribe((products) => {
